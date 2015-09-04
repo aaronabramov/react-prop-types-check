@@ -1,0 +1,17 @@
+{
+  "name": "react-prop-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register test/*.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0",
+    "react": "^0.13.3"
+  }
+}
