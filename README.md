@@ -1,7 +1,7 @@
 # React.PropTypes validation outside of React
 
 ```js
-import validate from '../';
+import check from 'react-prop-types-check';
 
 const type = {
     a: React.PropTypes.array.isRequired,
@@ -12,7 +12,7 @@ const type = {
     })
 };
 
-validate({
+check({
     a: 5,
     b: 'abc',
     c: {d: 1}

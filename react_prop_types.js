@@ -1,11 +1,9 @@
-import React from 'react';
-
 /**
  * @param {Object} object to be validated
  * @param {Object} propTypes object with defined prop types
  * @param {Boolean} _throw if set to true, invalid prop types will throw
  */
-export default function validate(object, propTypes, _throw) {
+export default function check(object, propTypes, _throw) {
     let propName;
 
     for (propName in propTypes) {
@@ -15,7 +13,7 @@ export default function validate(object, propTypes, _throw) {
                 if (_throw) {
                     throw error;
                 } else {
-                    console.warn(error.message);
+                    console.error(error.message);
                 }
             }
         }

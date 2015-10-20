@@ -1,14 +1,14 @@
 {
-  "name": "react-prop-types",
+  "name": "react-prop-types-check",
   "version": "0.0.0",
-  "description": "",
+  "description": "React.PropTypes outside of react",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register test/**/*_test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dmitriiabramov/react-prop-types.git"
+    "url": "git@github.com:dmitriiabramov/react-prop-types-check.git"
   },
   "author": "Dmitrii Abramov",
   "license": "BSD-3-Clause",
