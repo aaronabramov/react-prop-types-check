@@ -1,13 +1,17 @@
 {
   "name": "react-prop-types",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register test/*.js"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register test/**/*_test.js"
   },
-  "author": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dmitriiabramov/react-prop-types.git"
+  },
+  "author": "Dmitrii Abramov",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "babel": "^5.8.23",
     "chai": "^3.2.0",

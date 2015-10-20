@@ -1,6 +1,7 @@
 import React from 'react';
 import {expect} from 'chai'
 import validate from '../';
+import type from '../type';
 
 describe('react-prop-types', () => {
     it('validates primitives', function() {
@@ -18,5 +19,9 @@ describe('react-prop-types', () => {
             b: 'abc',
             c: {d: 1}
         }, type);
+    });
+
+    it('validates external type', function() {
+        validate({}, {message: type});
     });
 });
