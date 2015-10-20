@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dmitriiabramov/react-prop-types-check.svg?branch=master)](https://travis-ci.org/dmitriiabramov/react-prop-types-check)
+
 # React.PropTypes validation outside of React
 
 ```js
