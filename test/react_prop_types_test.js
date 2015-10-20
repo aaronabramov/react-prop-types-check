@@ -1,7 +1,21 @@
 import React from 'react';
 import {expect} from 'chai'
-import validate from '../';
-import type from '../type';
+import check from '../';
+import type from './type';
+
+beforeEach(function() {
+    this._consoleError = console.error;
+
+    this.errors = [];
+
+    global.console.error = (...args) => {
+        this.errors.push(args);
+    };
+});
+
+afterEach(function() {
+    console.error = this._consoleError;
+});
 
 describe('react-prop-types', () => {
     it('validates primitives', function() {
@@ -14,14 +28,22 @@ describe('react-prop-types', () => {
             })
         };
 
-        validate({
+        check({
             a: 5,
             b: 'abc',
             c: {d: 1}
         }, type);
+
+        expect(this.errors).to.have.length(2);
     });
 
     it('validates external type', function() {
-        validate({}, {message: type});
+        check({}, {message: type});
+        expect(this.errors).to.have.length(1);
+    });
+
+    it('passes validation', function() {
+        check({a: 1}, {a: React.PropTypes.number.isRequired});
+        expect(this.errors).to.be.empty;
     });
 });
